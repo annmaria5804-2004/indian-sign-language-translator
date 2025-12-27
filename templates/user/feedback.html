@@ -1,0 +1,43 @@
+{% extends "user/userdash.html" %}
+
+{% block title %}Feedback{% endblock %}
+{% block header %}Feedback{% endblock %}
+
+{% block content %}
+
+<style>
+  .feedback-form {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .feedback-form textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #90caf9;
+  }
+
+  .feedback-form button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #004aad;
+    color: white;
+    border: none;
+    border-radius: 20px;
+  }
+</style>
+
+<div class="feedback-form">
+  <h1>Send Your Feedback</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    <textarea name="feedback" placeholder="Write your feedback here..." required></textarea>
+    <button type="submit">Submit Feedback</button>
+  </form>
+</div>
+
+{% endblock %}

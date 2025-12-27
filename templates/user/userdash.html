@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard | ISL System</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #eef4ff;
+      min-height: 100vh;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 240px;
+      height: 100%;
+      background: linear-gradient(180deg, #003b8f, #96c2f8ff);
+      color: white;
+      padding: 20px;
+      z-index: 200;
+    }
+
+    .sidebar img {
+      width: 140px;
+      display: block;
+      margin: 0 auto 30px;
+    }
+
+    .sidebar h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      left: 240px;
+      top: 0;
+      width: calc(100% - 240px);
+      height: 70px;
+      background: linear-gradient(90deg, #004aad, #2a73ff);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      color: white;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .navbar h2 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-btn {
+      background: rgba(255,255,255,0.2);
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255,255,255,0.4);
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main {
+      margin-left: 240px;
+      margin-top: 90px;
+      padding: 30px;
+    }
+
+    .dashboard {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,80,0.2);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      color: #003366;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    /* ===== OPTIONS GRID ===== */
+    .options {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 25px;
+    }
+
+    .option-card {
+      {% comment %} background: linear-gradient(145deg, #ffffff, #e6ecff); {% endcomment %}
+      border-radius: 15px;
+      padding: 95px 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.4s;
+      height:300px;
+      box-shadow: 8px 8px 20px rgba(0,0,60,0.1);
+      box-sizing:border-box;
+    }
+.o1{
+  background:url('https://images.pexels.com/photos/9017747/pexels-photo-9017747.jpeg?cs=srgb&dl=pexels-kevin-malik-9017747.jpg&fm=jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+.o2{
+  background-color:rgba(90, 90, 232, 0.6);
+}
+    .option-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,60,150,0.25);
+    }
+
+    .option-card span {
+      font-size: 40px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .option-card h3 {
+      color: #004aad;
+      margin-bottom: 5px;
+    }
+
+    .option-card p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* ===== ISL INFO ===== */
+    .isl-info {
+      margin-top: 50px;
+      background: linear-gradient(135deg, #004aad, #044488ff);
+      color: white;
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      {% comment %} margin-left: 240px; {% endcomment %}
+      margin-top: 30px;
+      text-align: center;
+      color: #555;
+      font-size: 14px;
+      position:absolute;
+      bottom:0;
+      left:700px;
+    
+    }
+
+    footer a {
+      color: #004aad;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media(max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+      .navbar {
+        left: 200px;
+        width: calc(100% - 200px);
+      }
+      .main, footer {
+        margin-left: 200px;
+      }
+      .options {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <img src="/media/logo_1.png" alt="Logo">
+  <h3>Bridging Silence</h3>
+<a href="/userdash">🏠 DashBoard</a>
+  <a href="/isl">🤚 Gesture Recognition</a>
+  <a href="/sign_animation">✍️ Gesture Generator</a>
+  <a href="/feedback">💬 Feedback</a>
+  <a href="/complaint">📝 Complaint</a>
+  <a href="/viewcompuser">📄 Your Complaints</a>
+</div>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>User Dashboard</h2>
+  <div class="nav-actions">
+    <div class="nav-btn" onclick="location.href='/changepassword'">🔐 Change Password</div>
+    <div class="nav-btn" onclick="location.href='/'">🚪 Logout</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+     {% block content %}
+    <!-- Child page content loads here -->
+   
+  <div class="dashboard">
+    <h1>Welcome to ISL System</h1>
+
+    <div class="options">
+      <div class="option-card o1" style="grid-column: span 3;" onclick="location.href='/isl'">
+        {% comment %} <span>🤚</span> {% endcomment %}
+        <h3>Gesture Recognition</h3>
+        <p>Real-time ISL recognition.</p>
+      </div>
+
+      <div class="option-card o2" style="grid-column: span 3" onclick="location.href='/sign_animation'">
+        <span>✍️</span>
+        <h3>Translating...</h3>
+        {% comment %} <p>Text to gesture conversion.</p> {% endcomment %}
+      </div>
+
+      {% comment %} <div class="option-card" style="grid-column: span 2;" onclick="location.href='/feedback'">
+        <span>💬</span>
+        <h3>Feedback</h3>
+      </div>
+
+      <div class="option-card" style="grid-column: span 2;" onclick="location.href='/complaint'">
+        <span>📝</span>
+        <h3>Complaint</h3>
+      </div>
+
+      <div class="option-card" style="grid-column: span 2;" onclick="location.href='/viewcompuser'">
+        <span>📄</span>
+        <h3>Your Complaints</h3>
+      </div>
+    </div> {% endcomment %}
+
+    {% comment %} <div class="isl-info">
+      <h2>About This ISL System</h2>
+      <ul>
+        <li>Real-time Indian Sign Language recognition</li>
+        <li>Malayalam text & audio output</li>
+        <li>Designed for hearing & speech impaired users</li>
+      </ul>
+    </div> {% endcomment %}
+     {% endblock %}
+  </div>
+
+ 
+</div>
+ <footer>
+    © 2025 ISL Gesture Recognition System <br>
+    📧 <a href="mailto:bridgingsilence4673@gmail.com">mainpro4673@gmail.com</a>
+  </footer>
+</body>
+</html>

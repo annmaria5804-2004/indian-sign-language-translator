@@ -1,0 +1,234 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISL Translator | Login</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #cfd8e3, #e8eef5);
+}
+
+/* ===== MAIN CARD (FLOATING) ===== */
+.main-card{
+    width:95%;
+    max-width:1350px;
+    height:620px;
+    background: linear-gradient(135deg, #0b1f3b, #102a52);
+    border-radius:26px;
+    display:flex;
+    overflow:hidden;
+    box-shadow:0 30px 70px rgba(0,0,0,0.35);
+
+    /* FLOATING ANIMATION */
+    animation: boxFloat 6s ease-in-out infinite;
+}
+
+/* ===== LEFT INFO ===== */
+.left-section{
+    flex:1.3;
+    padding:80px;
+    color:#ffffff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.logo{
+    width:300px;
+    margin-bottom:30px;
+    margin-left:50px;
+
+    /* Logo floating */
+    animation: logoFloat 3.5s ease-in-out infinite;
+}
+
+.site-title{
+    font-size:48px;
+    font-weight:800;
+    margin-bottom:14px;
+}
+
+.tagline{
+    font-size:20px;
+    color:#b7c9e6;
+    margin-bottom:30px;
+}
+
+.about{
+    font-size:16px;
+    line-height:1.8;
+    color:#dbe6ff;
+    max-width:520px;
+    margin-bottom:30px;
+}
+
+/* ===== RIGHT LOGIN PANEL ===== */
+.right-section{
+    flex:1;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ===== LOGIN BOX ===== */
+.login-container{
+    width:420px;
+    padding:55px 50px;
+    background: rgba(255,255,255,0.12);
+    border-radius:22px;
+    text-align:center;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.15);
+}
+
+.login-container h1{
+    color:#ffffff;
+    font-size:34px;
+    font-weight:700;
+    margin-bottom:35px;
+}
+
+/* INPUTS */
+.input-group{
+    position:relative;
+    margin-bottom:26px;
+}
+
+.input-group input{
+    width:100%;
+    padding:16px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    background: rgba(255,255,255,0.15);
+    color:#ffffff;
+    font-size:16px;
+}
+
+.input-group input::placeholder{
+    color:#cddcff;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:10px;
+    background:#4da3ff;
+    color:#ffffff;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#2e8cff;
+}
+
+/* LINKS */
+.extra-links{
+    margin-top:22px;
+    font-size:15px;
+}
+
+.extra-links a{
+    color:#9cc8ff;
+    text-decoration:none;
+}
+
+.extra-links a:hover{
+    text-decoration:underline;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes boxFloat{
+    0%   { transform:translateY(0); }
+    50%  { transform:translateY(-18px); }
+    100% { transform:translateY(0); }
+}
+
+@keyframes logoFloat{
+    0%   { transform:translateY(0); }
+    50%  { transform:translateY(-12px); }
+    100% { transform:translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    .main-card{
+        flex-direction:column;
+        height:auto;
+    }
+    .left-section{
+        text-align:center;
+        padding:50px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="main-card">
+
+    <!-- LEFT CONTENT -->
+    <div class="left-section">
+        <img src="/media/logo_1.png" class="logo" alt="ISL Logo">
+
+        <div class="site-title">Bridging Silence</div>
+        <div class="tagline">Indian Sign Language Translator</div>
+
+        <p class="about">
+            A real-time Indian Sign Language translation system that converts
+            hand gestures into Malayalam text and audio, enabling inclusive
+            communication between hearing and speech-impaired individuals.
+        </p>
+    </div>
+
+    <!-- RIGHT LOGIN -->
+    <div class="right-section">
+        <form class="login-container" method="post">
+            {% csrf_token %}
+            <h1>LOGIN</h1>
+
+            <div class="input-group">
+                <input type="text" name="username" placeholder="email@gmail.com" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <button type="submit">LOG IN</button>
+
+            <div class="extra-links">
+                <p><a href="/forgotpassword">Forgot Password?</a></p>
+                <p>New User? <a href="reg">Register Here</a></p>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
