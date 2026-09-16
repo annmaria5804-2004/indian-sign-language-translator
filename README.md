@@ -169,6 +169,8 @@ The predicted gesture is mapped to the corresponding Malayalam text and audio ou
 
 * 🐍 Python
 * JavaScript
+* TypeScript
+* SQL
 * HTML5
 * CSS3
 * SQL
@@ -178,6 +180,7 @@ The predicted gesture is mapped to the corresponding Malayalam text and audio ou
 
 * Django
 * Node.js
+* Angular
 
 ### Computer Vision
 
@@ -186,7 +189,6 @@ The predicted gesture is mapped to the corresponding Malayalam text and audio ou
 
 ### Machine Learning
 
-* Machine Learning
 * Random Forest Classifier
 
 ### Database
@@ -325,7 +327,7 @@ The project demonstrates how software engineering and machine learning can be ap
 ---
 
 # 📸 Application Screenshots
-## 📸 Application Screenshots
+
 
 ### 🔐 Authentication
 
