@@ -466,6 +466,10 @@ The current repository contains the implementation of the Indian Sign Language r
 
 Vimal Jyothi Engineering College
 
+[![GitHub](https://img.shields.io/badge/GitHub-Ann%20Maria-black?logo=github)](https://github.com/annmaria5804-2004)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ann%20Maria-blue?logo=linkedin)](https://www.linkedin.com/in/ann-maria-869154322/)
+
 ---
 
 ## ⭐ Project
