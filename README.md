@@ -95,8 +95,10 @@ Malayalam Text Generation
      ↓
 Malayalam Audio Output
 ```
+--- 
 
-## 📊 Data Flow Diagrams
+
+# 📊 Data Flow Diagrams
 
 
 ### DFD Level 0
@@ -146,6 +148,21 @@ The predicted gesture is mapped to the corresponding Malayalam text and audio ou
 
 ---
 
+## 📈 Model Training & Evaluation
+
+### Training & Evaluation Results
+
+
+![Training Result 1](3.jpeg)
+
+
+![Training Result 2](2.jpeg)
+
+
+![Model Evaluation](WhatsApp%20Image%202026-01-28%20at%2010.45.23%20AM.jpeg)
+
+
+----
 # 🛠️ Technology Stack
 
 ### Programming Languages
@@ -287,8 +304,11 @@ indian-sign-language-translator/
 * Integrate text-to-sign functionality.
 * Explore technology-based solutions for accessible communication.
 
+---
 
-## 👥 Use Case Diagram
+
+# 👥 Use Case Diagram
+
 
 ![Use Case Diagram](USECASE.drawio%20%281%29%20%281%29.png)
 
