@@ -317,17 +317,34 @@ The project demonstrates how software engineering and machine learning can be ap
 ---
 
 # 📸 Application Screenshots
+## 📸 Application Screenshots
 
-> Screenshots of the application will be added here.
+### 🔐 Authentication
 
-Planned screenshots include:
+| Login               | Registration             |
+| ------------------- | ------------------------ |
+| ![Login](login.png) | ![Registration](reg.png) |
 
-* 🏠 Application homepage
-* 📷 Live camera interface
-* 🤟 Gesture recognition
-* 📝 Malayalam text output
-* 🔊 Audio output
-* 🔄 Text-to-sign interface
+### 🏠 Application Dashboard
+
+![User Dashboard](userdash.png)
+
+### 🤟 Sign Language → Malayalam Text
+
+![Sign Language Translation Output](out.jpg)
+
+![Translation Interface](image%20%289%29%20%281%29.png)
+
+![Application Output](image%20%288%29%20%281%29.png)
+
+### 🔄 Text → Sign Language
+
+![Text-to-Sign Generator](generator.png)
+
+### 🛠️ Admin Interface
+
+![Admin Dashboard](admindash.png)
+
 
 ---
 
