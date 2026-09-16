@@ -96,6 +96,24 @@ Malayalam Text Generation
 Malayalam Audio Output
 ```
 
+## 📊 Data Flow Diagrams
+
+
+### DFD Level 0
+
+![DFD Level 0](DFD_Level0%20%281%29.png)
+
+
+### DFD Level 1
+
+![DFD Level 1](DFD%20LVL1%20%281%29.png)
+
+
+### DFD Level 2
+
+![DFD Level 2](DFD%202.drawio%20%281%29.png)
+
+
 ---
 
 # 🧠 Machine Learning Pipeline
