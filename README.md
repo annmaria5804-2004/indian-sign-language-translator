@@ -287,6 +287,11 @@ indian-sign-language-translator/
 * Integrate text-to-sign functionality.
 * Explore technology-based solutions for accessible communication.
 
+
+## 👥 Use Case Diagram
+
+![Use Case Diagram](USECASE.drawio%20%281%29%20%281%29.png)
+
 ---
 
 # ♿ Accessibility & Social Impact
